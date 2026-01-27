@@ -12,8 +12,9 @@ Disallow: /*?fbclid=
 Crawl-delay: 1
 Request-rate: 1/1s
 
-Sitemap: https://trepdawoud.com/sitemap.xml
-Sitemap: https://trepdawoud.com/sitemap-pages.xml
-Sitemap: https://trepdawoud.com/sitemap-blog.xml
+Sitemap: https://trep-dawoud.github.io/trep-dawoud/sitemap.xml
+Sitemap: https://trep-dawoud.github.io/trep-dawoud/sitemap-pages.xml
+Sitemap: https://trep-dawoud.github.io/trep-dawoud/sitemap-blog.xml
 
-Host: https://trepdawoud.com
+Host: https://trep-dawoud.github.io/trep-dawoud/
+
