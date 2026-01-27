@@ -235,41 +235,40 @@
 <script src="../js/effects.js"></script>
 <script>
 const mountains = [
-    { name: "جبل توبقال", height: 4167, lat: 31.0595, lng: -5.5473, difficulty: "hard", region: "أطلس العالي", description: "أعلى قمة في شمال أفريقيا. تسلق متقدم يتطلب خبرة وتحضير كبير. الطريق صعب والطقس قد يكون قاسياً خاصة في الشتاء. تستغرق الرحلة 2-3 أيام. الإطلالات من القمة لا تصدق وتشمل رؤية البحر المتوسط في الأيام الصافية.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Toubkal_1.JPG/400px-Toubkal_1.JPG" },
+    { name: "جبل توبقال", height: 4167, lat: 31.0595, lng: -5.5473, difficulty: "hard", region: "أطلس العالي", description: "أعلى قمة في شمال أفريقيا. تسلق متقدم يتطلب خبرة وتحضير كبير. الطريق صعب والطقس قد يكون قاسياً خاصة في الشتاء. تستغرق الرحلة 2-3 أيام. الإطلالات من القمة لا تصدق وتشمل رؤية البحر المتوسط في الأيام الصافية.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل ميشليفن", height: 3444, lat: 31.9453, lng: -5.4594, difficulty: "medium", region: "أطلس الأوسط", description: "جبل رائع في أطلس الأوسط بارتفاع 3444 متراً. الصعود متوسط الصعوبة مع مناظر طبيعية جميلة جداً. يمكن الصعود في يوم واحد من قرية تازانخت. الطريق محفوف بالخطورة في بعض الأماكن لكنه جميل جداً.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Montagne_enneigee.jpg/400px-Montagne_enneigee.jpg" },
+    { name: "جبل ميشليفن", height: 3444, lat: 31.9453, lng: -5.4594, difficulty: "medium", region: "أطلس الأوسط", description: "جبل رائع في أطلس الأوسط بارتفاع 3444 متراً. الصعود متوسط الصعوبة مع مناظر طبيعية جميلة جداً. يمكن الصعود في يوم واحد من قرية تازانخت. الطريق محفوف بالخطورة في بعض الأماكن لكنه جميل جداً.", image: "../images/dawoud.jpg" },
+    { name: "جبل أيلال", height: 3257, lat: 31.6928, lng: -5.4614, difficulty: "medium", region: "أطلس الأوسط", description: "جبل جميل وسهل نسبياً في أطلس الأوسط. يتميز بمنظر رائع من القمة حيث يمكنك رؤية الوديان الخضراء والجبال المحيطة. الصعود يستغرق 5-6 ساعات. مناسب للمبتدئين ذوي اللياقة الجيدة.", image: "../images/dawoud.jpg"  },
     
-    { name: "جبل أيلال", height: 3257, lat: 31.6928, lng: -5.4614, difficulty: "medium", region: "أطلس الأوسط", description: "جبل جميل وسهل نسبياً في أطلس الأوسط. يتميز بمنظر رائع من القمة حيث يمكنك رؤية الوديان الخضراء والجبال المحيطة. الصعود يستغرق 5-6 ساعات. مناسب للمبتدئين ذوي اللياقة الجيدة.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Tizi_n_Tichka.jpg/400px-Tizi_n_Tichka.jpg" },
+    { name: "جبل أوكيمدن", height: 3267, lat: 31.4167, lng: -5.2667, difficulty: "easy", region: "أطلس الأوسط", description: "محطة تزلج شهيرة وجبل سهل الصعود. المنطقة مجهزة بمرافق سياحية جيدة. الصعود سهل والإطلالات رائعة. يمكن الصعود مع العائلة. المنطقة تشتهر بالثلج في الشتاء.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل أوكيمدن", height: 3267, lat: 31.4167, lng: -5.2667, difficulty: "easy", region: "أطلس الأوسط", description: "محطة تزلج شهيرة وجبل سهل الصعود. المنطقة مجهزة بمرافق سياحية جيدة. الصعود سهل والإطلالات رائعة. يمكن الصعود مع العائلة. المنطقة تشتهر بالثلج في الشتاء.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Oukaimeden_ski_resort.jpg/400px-Oukaimeden_ski_resort.jpg" },
+    { name: "جبل كاوسانت", height: 3612, lat: 31.4483, lng: -5.0783, difficulty: "hard", region: "أطلس الأوسط", description: "جبل عالي وصعب في أطلس الأوسط. الصعود يتطلب خبرة جيدة وتحضير كامل. المسار معقد والطقس قد يكون سيء. الإطلالات من القمة رائعة جداً وتستحق الجهد.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل كاوسانت", height: 3612, lat: 31.4483, lng: -5.0783, difficulty: "hard", region: "أطلس الأوسط", description: "جبل عالي وصعب في أطلس الأوسط. الصعود يتطلب خبرة جيدة وتحضير كامل. المسار معقد والطقس قد يكون سيء. الإطلالات من القمة رائعة جداً وتستحق الجهد.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Kasbah_Ait_Benhaddou.jpg/400px-Kasbah_Ait_Benhaddou.jpg" },
-    
-    { name: "جبل أنت", height: 3267, lat: 31.1089, lng: -5.3425, difficulty: "medium", region: "أطلس العالي", description: "جبل متوسط الصعوبة في أطلس العالي. يوفر صعود جميل مع مناظر خلابة. يمكن الصعود في يوم واحد. المسار محدد بوضوح والمنطقة آمنة نسبياً.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Trekking_in_Atlas.jpg/400px-Trekking_in_Atlas.jpg" },
+    { name: "جبل أنت", height: 3267, lat: 31.1089, lng: -5.3425, difficulty: "medium", region: "أطلس العالي", description: "جبل متوسط الصعوبة في أطلس العالي. يوفر صعود جميل مع مناظر خلابة. يمكن الصعود في يوم واحد. المسار محدد بوضوح والمنطقة آمنة نسبياً.", image: "../images/dawoud.jpg" },
 
-    { name: "جبل أرودي", height: 4016, lat: 31.0361, lng: -5.5894, difficulty: "hard", region: "أطلس العالي", description: "جبل عالي جداً وصعب جداً. يتطلب خبرة ضخمة وتحضير كامل. المسار معقد جداً والأخطار كثيرة. فقط للمتسلقين المتقدمين جداً.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Atlas_mountains.jpg/400px-Atlas_mountains.jpg" },
+    { name: "جبل أرودي", height: 4016, lat: 31.0361, lng: -5.5894, difficulty: "hard", region: "أطلس العالي", description: "جبل عالي جداً وصعب جداً. يتطلب خبرة ضخمة وتحضير كامل. المسار معقد جداً والأخطار كثيرة. فقط للمتسلقين المتقدمين جداً.", image: "../images/dawoud.jpg" },
 
-    { name: "جبل تيشوين", height: 3540, lat: 31.2553, lng: -5.5553, difficulty: "medium", region: "أطلس العالي", description: "جبل جميل وحلو في أطلس العالي. الصعود متوسط والمناظر جميلة جداً. يمكن الصعود في يوم واحد. المنطقة بها قرى جميلة أيضاً.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Village_in_atlas.jpg/400px-Village_in_atlas.jpg" },
+    { name: "جبل تيشوين", height: 3540, lat: 31.2553, lng: -5.5553, difficulty: "medium", region: "أطلس العالي", description: "جبل جميل وحلو في أطلس العالي. الصعود متوسط والمناظر جميلة جداً. يمكن الصعود في يوم واحد. المنطقة بها قرى جميلة أيضاً.", image: "../images/dawoud.jpg" },
 
-    { name: "جبل سيروة", height: 3305, lat: 29.9053, lng: -6.8881, difficulty: "medium", region: "أطلس الصغير", description: "جبل رائع في أطلس الصغير. الصعود متوسط والمناظر جميلة جداً. توجد قرى بدوية بالقرب منها. الطقس عادة جميل هنا.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Anti_Atlas.jpg/400px-Anti_Atlas.jpg" },
+    { name: "جبل سيروة", height: 3305, lat: 29.9053, lng: -6.8881, difficulty: "medium", region: "أطلس الصغير", description: "جبل رائع في أطلس الصغير. الصعود متوسط والمناظر جميلة جداً. توجد قرى بدوية بالقرب منها. الطقس عادة جميل هنا.", image: "../images/dawoud.jpg" },
 
-    { name: "جبل لكست", height: 2359, lat: 30.1667, lng: -6.5, difficulty: "easy", region: "أطلس الصغير", description: "جبل سهل وجميل في أطلس الصغير. مناسب جداً للمبتدئين. الصعود لا يأخذ أكثر من 4 ساعات. المناظر جميلة والمنطقة آمنة جداً.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Berber_village.jpg/400px-Berber_village.jpg" },
+    { name: "جبل لكست", height: 2359, lat: 30.1667, lng: -6.5, difficulty: "easy", region: "أطلس الصغير", description: "جبل سهل وجميل في أطلس الصغير. مناسب جداً للمبتدئين. الصعود لا يأخذ أكثر من 4 ساعات. المناظر جميلة والمنطقة آمنة جداً.", image: "../images/dawoud.jpg" },
 
     // Adding more mountains to reach 70+ total
-    { name: "جبل دورت", height: 2638, lat: 29.7667, lng: -7.5, difficulty: "medium", region: "أطلس الصغير", description: "جبل جميل في أطلس الصغير. الصعود متوسط والإطلالات رائعة. يمكن رؤية الصحراء من القمة في الأيام الصافية.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Desert_landscape.jpg/400px-Desert_landscape.jpg" },
+    { name: "جبل دورت", height: 2638, lat: 29.7667, lng: -7.5, difficulty: "medium", region: "أطلس الصغير", description: "جبل جميل في أطلس الصغير. الصعود متوسط والإطلالات رائعة. يمكن رؤية الصحراء من القمة في الأيام الصافية.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل تافينغ", height: 2852, lat: 29.8333, lng: -7.3333, difficulty: "medium", region: "أطلس الصغير", description: "جبل صحراوي جميل جداً. الصعود متوسط والمناظر فريدة من نوعها. الشمس تغيب بشكل جميل جداً من هنا.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mountain_sunset.jpg/400px-Mountain_sunset.jpg" },
+    { name: "جبل تافينغ", height: 2852, lat: 29.8333, lng: -7.3333, difficulty: "medium", region: "أطلس الصغير", description: "جبل صحراوي جميل جداً. الصعود متوسط والمناظر فريدة من نوعها. الشمس تغيب بشكل جميل جداً من هنا.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل تابط", height: 2301, lat: 30.0, lng: -7.1667, difficulty: "easy", region: "أطلس الصغير", description: "جبل سهل جداً في أطلس الصغير. مناسب جداً للعائلات والمبتدئين. الصعود يستغرق 3 ساعات فقط. المناظر جميلة والطريق آمن تماماً.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Family_hiking.jpg/400px-Family_hiking.jpg" },
+    { name: "جبل تابط", height: 2301, lat: 30.0, lng: -7.1667, difficulty: "easy", region: "أطلس الصغير", description: "جبل سهل جداً في أطلس الصغير. مناسب جداً للعائلات والمبتدئين. الصعود يستغرق 3 ساعات فقط. المناظر جميلة والطريق آمن تماماً.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل أملن", height: 2340, lat: 30.2, lng: -6.8, difficulty: "easy", region: "أطلس الصغير", description: "جبل سهل وجميل جداً في أطلس الصغير. الصعود سهل والمناظر خلابة. يوجد بئر ماء في القمة. المنطقة بها قرى بدوية جميلة.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Mountain_water.jpg/400px-Mountain_water.jpg" },
+    { name: "جبل أملن", height: 2340, lat: 30.2, lng: -6.8, difficulty: "easy", region: "أطلس الصغير", description: "جبل سهل وجميل جداً في أطلس الصغير. الصعود سهل والمناظر خلابة. يوجد بئر ماء في القمة. المنطقة بها قرى بدوية جميلة.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل بني ملال", height: 1987, lat: 32.3333, lng: -6.1667, difficulty: "easy", region: "أطلس المتوسط", description: "جبل سهل جداً بالقرب من مدينة بني ملال. مناسب جداً للمبتدئين والعائلات. الصعود يستغرق ساعتين فقط. المناظر جميلة والمدينة بالقرب منها.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/City_from_mountain.jpg/400px-City_from_mountain.jpg" },
+    { name: "جبل بني ملال", height: 1987, lat: 32.3333, lng: -6.1667, difficulty: "easy", region: "أطلس المتوسط", description: "جبل سهل جداً بالقرب من مدينة بني ملال. مناسب جداً للمبتدئين والعائلات. الصعود يستغرق ساعتين فقط. المناظر جميلة والمدينة بالقرب منها.", image: "../images/dawoud.jpg" },
 
     // Continue adding more mountains...
-    { name: "جبل زاغورة", height: 2127, lat: 33.6667, lng: -3.8333, difficulty: "easy", region: "الريف", description: "جبل جميل في الريف. الصعود سهل والمناظر خضراء جداً. المنطقة رطبة وجميلة. مناسب للمشي والاستكشاف.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Green_mountains.jpg/400px-Green_mountains.jpg" },
+    { name: "جبل زاغورة", height: 2127, lat: 33.6667, lng: -3.8333, difficulty: "easy", region: "الريف", description: "جبل جميل في الريف. الصعود سهل والمناظر خضراء جداً. المنطقة رطبة وجميلة. مناسب للمشي والاستكشاف.", image: "../images/dawoud.jpg" },
     
-    { name: "جبل تديوين", height: 2056, lat: 33.8, lng: -3.6, difficulty: "easy", region: "الريف", description: "جبل سهل في الريف. الصعود مريح والمناظر جميلة جداً. توجد ينابيع ماء في المنطقة. مناسب للعائلات والمبتدئين.", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Spring_water.jpg/400px-Spring_water.jpg" }
+    { name: "جبل تديوين", height: 2056, lat: 33.8, lng: -3.6, difficulty: "easy", region: "الريف", description: "جبل سهل في الريف. الصعود مريح والمناظر جميلة جداً. توجد ينابيع ماء في المنطقة. مناسب للعائلات والمبتدئين.", image: "../images/dawoud.jpg" }
 ];
 
 // Add more mountains to reach 70+
@@ -380,3 +379,4 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
