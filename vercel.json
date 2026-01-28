@@ -121,6 +121,8 @@
   ],
   "env": {
     "NEXT_PUBLIC_APP_NAME": "@TREP DAWOUD",
+    
     "NEXT_PUBLIC_APP_URL": "https://trepdawoud.com"
   }
 }
+
