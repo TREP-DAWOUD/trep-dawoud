@@ -30,7 +30,7 @@
   },
   "homepage": "https://trepdawoud.com",
   "bugs": {
-    "url": "https://github.com/trepdawoud/website/issues",
+    "url": "https://trep-dawoud.github.io/trep-dawoud",
     "email": "support@trepdawoud.com"
   },
   "devDependencies": {
@@ -43,3 +43,4 @@
     "npm": ">=6.0.0"
   }
 }
+
