@@ -3,145 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="مدونة TREP DAWOUD - قصص وخبرات من مجتمع المتسلقين">
-    <title>المدونة | TREP DAWOUD</title>
+    <meta name="description" content="مدونة TREP DAWOUD - نصائح وخبرات في تسلق الجبال">
+    <meta name="keywords" content="مدونة, تسلق جبال, نصائح, خبرات">
+    <title>المدونة - TREP DAWOUD</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛏️</text></svg>">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/effects.css">
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-        
-        .modal-content {
-            background: var(--bg-primary);
-            padding: 2rem;
-            border-radius: 12px;
-            max-width: 700px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            animation: slideInUp 0.3s ease;
-        }
-        
-        .modal-close {
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: var(--text-secondary);
-            background: none;
-            border: none;
-        }
-        
-        .modal-close:hover {
-            color: var(--text-primary);
-        }
-        
-        .blog-card-full img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-        }
-    </style>
 </head>
 <body>
 
+<!-- ===================== NAVBAR ===================== -->
 <nav class="navbar">
     <div class="navbar-container container">
-        <div class="navbar-brand">⛏️ TREP DAWOUD</div>
+        <a href="../" class="navbar-brand">⛏️ TREP DAWOUD</a>
+        
         <ul class="navbar-nav">
-            <li><a href="../index.html">الرئيسية</a></li>
-            <li><a href="./blog.html" class="active">المدونة</a></li>
-            <li><a href="./mountains.html">الجبال</a></li>
-            <li><a href="./refunding.html">الاسترجاع</a></li>
-            <li><a href="./checklist.html">قائمة التجهيز</a></li>
-            <li><a href="./destination.html">الوجهات</a></li>
-            <li><a href="./questions.html">الأسئلة</a></li>
-            <li><a href="./about.html">من نحن</a></li>
-            <li><a href="./services.html">الخدمات</a></li>
-            <li><a href="./trips.html">الرحلات</a></li>
-            <li><a href="./courses.html">الدورات</a></li>
-            <li><a href="./safety.html">السلامة</a></li>
-            <li><a href="./map.html">الخريطة</a></li>
-            <li><a href="./gallery.html">المعرض</a></li>
-            <li><a href="./contact.html">تواصل معنا</a></li>
-             <li><a href="./destinations.html">الوجهات</a></li>
+            <li><a href="../" class="nav-link">الرئيسية</a></li>
+            <li><a href="./booking.html" class="nav-link">الحجز</a></li>
+            <li><a href="./blog.html" class="nav-link active">المدونة</a></li>
+            <li><a href="./mountains.html" class="nav-link">الجبال</a></li>
+            <li><a href="./trips.html" class="nav-link">الرحلات</a></li>
+            <li><a href="./courses.html" class="nav-link">الدورات</a></li>
+            <li><a href="./destination.html" class="nav-link">الوجهات</a></li>
+            <li><a href="./checklist.html" class="nav-link">قائمة التجهيز</a></li>
+            <li><a href="./safety.html" class="nav-link">السلامة</a></li>
+            <li><a href="./gallery.html" class="nav-link">المعرض</a></li>
+            <li><a href="./about.html" class="nav-link">من نحن</a></li>
+            <li><a href="./contact.html" class="nav-link">تواصل معنا</a></li>
         </ul>
+
         <div class="navbar-controls">
-            <button class="theme-toggle">🌙</button>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="theme-toggle" title="تبديل الوضع المظلم" data-toggle-dark-mode>🌙</button>
+            <button class="mobile-menu-btn" data-toggle-menu>☰</button>
         </div>
     </div>
 </nav>
 
+<!-- ===================== HERO SECTION ===================== -->
 <section class="hero">
     <div class="hero-content reveal">
-        <h1>مدونة المغامرات</h1>
-        <p>قصص حقيقية وخبرات من متسلقي الجبال</p>
+        <h1>مدونة TREP DAWOUD</h1>
+        <p>نصائح وخبرات من مجتمع المتسلقين</p>
     </div>
 </section>
 
+<!-- ===================== BLOG ARTICLES ===================== -->
 <section class="section">
     <div class="container">
         <div class="section-title reveal">
-            <h2>آخر القصص والمقالات</h2>
-            <p>اكتشف قصص متسلقين حقيقيين وخبراتهم</p>
+            <h2>آخر المقالات</h2>
+            <p>اقرأ أحدث النصائح والخبرات</p>
         </div>
-        <div class="grid grid-3 reveal-group" id="blogContainer"></div>
+
+        <div class="grid grid-3 reveal-group" data-animate="fade-in-up">
+            <!-- Article Card 1 -->
+            <div class="card reveal hover-lift">
+                <div style="height: 200px; overflow: hidden; border-radius: 12px 12px 0 0;">
+                    <img src="../images/logo.jpg" alt="نصائح السلامة" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-primary" style="margin-bottom: 0.5rem; display: inline-block;">أمان</span>
+                    <h3 class="card-title">نصائح أساسية للسلامة عند التسلق</h3>
+                    <p class="card-text">تعرف على أهم نصائح السلامة التي يجب أن يتبعها كل متسلق</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <small class="text-muted">15 يناير 2026</small>
+                        <a href="#" class="btn btn-sm btn-outline">اقرأ المزيد →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Card 2 -->
+            <div class="card reveal hover-lift">
+                <div style="height: 200px; overflow: hidden; border-radius: 12px 12px 0 0;">
+                    <img src="../images/logo.jpg" alt="معدات التسلق" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-accent" style="margin-bottom: 0.5rem; display: inline-block;">معدات</span>
+                    <h3 class="card-title">دليل شامل لاختيار معدات التسلق</h3>
+                    <p class="card-text">تعلم كيفية اختيار الحبال والحماية والأحذية المناسبة</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <small class="text-muted">12 يناير 2026</small>
+                        <a href="#" class="btn btn-sm btn-outline">اقرأ المزيد →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Card 3 -->
+            <div class="card reveal hover-lift">
+                <div style="height: 200px; overflow: hidden; border-radius: 12px 12px 0 0;">
+                    <img src="../images/logo.jpg" alt="التسلق في الشتاء" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-content">
+                    <span class="badge badge-warning" style="margin-bottom: 0.5rem; display: inline-block; color: #000;">نصائح</span>
+                    <h3 class="card-title">التسلق في فصل الشتاء</h3>
+                    <p class="card-text">استعد لتسلق آمن في ظروف الطقس البارد والثلجية</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                        <small class="text-muted">10 يناير 2026</small>
+                        <a href="#" class="btn btn-sm btn-outline">اقرأ المزيد →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<div class="modal" id="storyModal">
-    <div class="modal-content">
-        <button class="modal-close" onclick="closeModal()">&times;</button>
-        <div id="modalBody"></div>
-    </div>
-</div>
-
+<!-- ===================== FOOTER ===================== -->
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-section">
             <h3>عن TREP DAWOUD</h3>
-            <p>منصة متخصصة في تسلق الجبال والمغامرات منذ 2024.</p>
+            <p>منصة متخصصة في تسلق الجبال والمغامرات الطبيعية منذ 2024</p>
             <div class="footer-social">
-                <a href="#">f</a>
-                <a href="#">📷</a>
-                <a href="#">𝕏</a>
-                <a href="#">💬</a>
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Twitter">𝕏</a>
+                <a href="#" title="WhatsApp">💬</a>
             </div>
         </div>
         <div class="footer-section">
             <h3>روابط سريعة</h3>
             <ul>
-                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../">الرئيسية</a></li>
                 <li><a href="./blog.html">المدونة</a></li>
-                <li><a href="./mountains.html">الجبال</a></li>
                 <li><a href="./contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>الخدمات</h3>
+            <ul>
+                <li><a href="./trips.html">الرحلات والفعاليات</a></li>
+                <li><a href="./courses.html">الدورات التدريبية</a></li>
+                <li><a href="./destination.html">المسارات الجبلية</a></li>
             </ul>
         </div>
         <div class="footer-section">
             <h3>تواصل معنا</h3>
             <p>📧 dauodm955@gmail.com</p>
             <p>📱 +212 696 750 378</p>
-            <p>📍 الفنيدق، المغرب</p>
+            <p>📍 الفنيدق، حي رأس لوطا، المغرب</p>
         </div>
     </div>
     <div class="footer-bottom">
@@ -149,120 +148,8 @@
     </div>
 </footer>
 
-<script src="../js/main.js"></script>
+<!-- JavaScript -->
+<script src="../js/navbar.js"></script>
 <script src="../js/effects.js"></script>
-<script>
-const blogPosts = [
-    {
-        id: 1,
-        title: "صعود جبل توبقال - قمة الحلم",
-        category: "تجارب",
-        date: "2024-01-15",
-        author: "محمد السعيد",
-        excerpt: "رحلة لن تُنسى إلى أعلى قمة في شمال أفريقيا",
-        fullContent: "في صباح يوم شتاء بارد، انطلقنا مع فريق من المتسلقين المحترفين نحو جبل توبقال، أعلى قمة في منطقة شمال أفريقيا بارتفاع 4167 متراً. كانت الرحلة تتطلب تحضيرات كبيرة وخبرة عملية لمواجهة الثلوج والجليد والبرد القاسي. اليوم الأول: بدأنا من قرية إملل الصغيرة ووصلنا إلى منزل الضيافة في منطقة Neltner على ارتفاع 3207 متراً. كان الطريق طويلاً لكن المناظر كانت خاخذة للأنفاس. اليوم الثاني: استيقظنا مبكراً جداً، قبل شروق الشمس مباشرة، وبدأنا الصعود نحو القمة. كان الجليد يغطي الصخور والهواء شديد البرودة. كل خطوة كانت صعبة لكن الإصرار يدفعنا للأمام. الوصول إلى القمة: بعد ست ساعات من الصعود المكثف، وصلنا أخيراً إلى القمة حيث كانت السماء صافية تماماً والمناظر الطبيعية خاخذة للأنفاس. شعرنا بفرح لا يوصف وسط الثلج والغيوم تحتنا."
-    },
-    {
-        id: 2,
-        title: "مغامرة في جبال الأطلس - البرية النقية",
-        category: "مغامرات",
-        date: "2024-01-10",
-        author: "فاطمة الزهراء",
-        excerpt: "تجربة فريدة مع الطبيعة البرية في قلب الجبال",
-        fullContent: "تحت سماء مليئة بالنجوم، قررنا التخييم في قلب جبال الأطلس، بعيداً عن صخب المدينة والحضارة. كانت الليلة الأولى مرعبة قليلاً، حيث سمعنا أصوات الحيوانات البرية من حولنا. تعلمنا بسرعة احترام الطبيعة والعيش معها بسلام. اكتشفنا أن الخوف من المجهول يختفي عندما تتعلم فهم البيئة من حولك. الصباح الأول: استيقظنا على منظر جبلي خلاب مع الضباب يغطي الوديان والأشعة الذهبية للشمس تخترق الغيوم. لم نشعر بأي إرهاق رغم نوم الخيمة. قضينا اليوم في استكشاف المسارات الجبلية ورؤية الينابيع الطبيعية والنباتات النادرة. التقينا ببدو محليين أخبرونا عن تاريخ هذه الجبال العريق. كانت هذه الرحلة تذكيراً قوياً بأهمية الحفاظ على الطبيعة."
-    },
-    {
-        id: 3,
-        title: "تسلق جبل إيموليلي - درس في الشجاعة",
-        category: "نصائح",
-        date: "2024-01-05",
-        author: "أحمد الهاشمي",
-        excerpt: "قصة متسلق مبتدئ يواجه خوفه من الأعلام",
-        fullContent: "كان أول صعود لي إلى جبل إيموليلي تجربة مرعبة ومثيرة في نفس الوقت. كنت أخاف من الأعالي والمنحدرات، لكن مرشدي الرائع ساعدني على تجاوز مخاوفي خطوة بخطوة. كل خطوة صعوداً كانت تزيل قليلاً من الخوف وتضيف الثقة. عندما وصلت إلى القمة، لم أستطع التحكم في دموعي من الفرح والارتياح. كانت تجربة تغيير حياتي حقاً. تعلمت أن الشجاعة ليست عدم الخوف، بل هي التحرك رغم الخوف. كل متسلق يجب أن يعرف أنه الخوف طبيعي وأنه يمكن التغلب عليه مع التدريب والإصرار الصحيح."
-    },
-    {
-        id: 4,
-        title: "رحلة جبل ميشليفن - الطريق الملتوي",
-        category: "تجارب",
-        date: "2023-12-28",
-        author: "سارة محمود",
-        excerpt: "تحدي المسارات الصعبة والطقس الصعب",
-        fullContent: "في موسم الثلج، قررنا تحدي أنفسنا برحلة إلى جبل ميشليفن. كانت الظروف قاسية والطريق ملتوياً وخطراً. قضينا أسابيع في التحضير البدني والذهني. تعلمنا تقنيات التسلق المتقدمة وكيفية التعامل مع الثلج والجليد. بدأنا في الصباح الباكر مع فريق من 6 متسلقين محترفين. الطقس كان صعباً لكننا كنا مستعدين. واجهنا انهيارات ثلجية وأعاصير جليدية. لكننا عملنا كفريق واحد ودعمنا بعضنا البعض. بعد يومين من الكفاح، وصلنا إلى القمة. الشعور بالنصر كان لا يصدق."
-    },
-    {
-        id: 5,
-        title: "دليل المتسلق الجديد - البداية الصحيحة",
-        category: "نصائح",
-        date: "2023-12-20",
-        author: "علي حسن",
-        excerpt: "كل ما تحتاج معرفته قبل بدء رحلتك الأولى",
-        fullContent: "إذا كنت جديداً في عالم تسلق الجبال، هذا الدليل سيساعدك على اتخاذ خطوتك الأولى بثقة. اختيار الجبل المناسب: ابدأ بجبال منخفضة الارتفاع وسهلة المسار. لا تحاول تسلق الجبال العالية فوراً. الحصول على المعدات الصحيحة: لا تشتري أشياء غالية في البداية. اطلب من الخبرة وانسخ معداتهم. التدريب: خذ دورات تدريبية من مدربين معتمدين. السلامة أولاً والدورات توفرها. الصحة البدنية: مارس الرياضة بانتظام قبل بدء التسلق. اللياقة البدنية أساسية. الفريق: لا تسلق وحيداً أبداً. اسلق مع فريق موثوق وذي خبرة."
-    },
-    {
-        id: 6,
-        title: "معايير السلامة في التسلق - لا تغامر بحياتك",
-        category: "أمان",
-        date: "2023-12-15",
-        author: "محمد الهاشمي",
-        excerpt: "أهم قواعد السلامة التي يجب على كل متسلق معرفتها",
-        fullContent: "السلامة ليست اختيارية في تسلق الجبال - إنها ضرورية. فحص المعدات: قبل كل رحلة، تحقق من جميع معداتك. الحبال والعُدل والخوذة والحزام - كل شيء يجب أن يكون في حالة ممتازة. الطقس: لا تسلق في العواصف أو عندما يكون الطقس سيئاً. الطقس يمكن أن يكون قاتلاً في الجبال. التدريب: لا تسلق دون تدريب كافٍ. المعدات وحدها ليست كافية. الرفاقة: كن مع أشخاص موثوقين ومدربين. الفريق الجيد ينقذ الأرواح. الاتصال: أخبر شخصاً موثوقاً بخطتك والمسار الذي ستتبعه. إذا لم تعد، سيعرفون أين تبحث عنك."
-    }
-];
-
-function generateBlogCards() {
-    const container = document.getElementById('blogContainer');
-    blogPosts.forEach(post => {
-        const card = document.createElement('div');
-        card.className = 'card reveal hover-lift';
-        card.innerHTML = `
-            <div style="height: 200px; overflow: hidden; border-radius: 12px 12px 0 0;">
-                <img src="../images/logo.jpg" alt="${post.title}" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="card-content">
-                <span class="badge badge-primary" style="margin-bottom: 0.5rem; display: inline-block;">${post.category}</span>
-                <h3 class="card-title">${post.title}</h3>
-                <p class="card-text">${post.excerpt}</p>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
-                    <small class="text-muted">${post.date}</small>
-                    <button class="btn btn-sm btn-outline" onclick="openStory(${post.id})">اقرأ المزيد →</button>
-                </div>
-            </div>
-        `;
-        container.appendChild(card);
-    });
-}
-
-function openStory(id) {
-    const post = blogPosts.find(p => p.id === id);
-    if (!post) return;
-    
-    const modalBody = document.getElementById('modalBody');
-    modalBody.innerHTML = `
-        <div class="blog-card-full">
-            <h2>${post.title}</h2>
-            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
-                <small class="text-muted">بقلم: ${post.author} | ${post.date}</small>
-            </div>
-            <img src="../images/logo.jpg" alt="${post.title}">
-            <div style="line-height: 1.8; color: var(--text-primary);">
-                ${post.fullContent}
-            </div>
-        </div>
-    `;
-    document.getElementById('storyModal').classList.add('active');
-}
-
-function closeModal() {
-    document.getElementById('storyModal').classList.remove('active');
-}
-
-document.getElementById('storyModal').addEventListener('click', (e) => {
-    if (e.target.id === 'storyModal') closeModal();
-});
-
-document.addEventListener('DOMContentLoaded', generateBlogCards);
-</script>
 </body>
 </html>
-
-
