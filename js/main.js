@@ -492,7 +492,7 @@
   // ======================== UTILITY FUNCTIONS ========================
 
   // Format currency to Arabic format
-  function formatCurrency(amount, currency = 'SAR') {
+  function formatCurrency(amount, currency = 'MAD') {
       return new Intl.NumberFormat('ar-SA', {
           style: 'currency',
           currency: currency
