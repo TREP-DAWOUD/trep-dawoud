@@ -64,10 +64,11 @@
   },
   "security": {
     "corsOrigins": [
-      "https://trepdawoud.com",
-      "https://www.trepdawoud.com"
+      "https://trep-dawoud.github.io/trep-dawoud",
+      "https://trep-dawoud.github.io/trep-dawoud"
     ],
     "csrfProtection": true,
     "contentSecurityPolicy": true
   }
 }
+
