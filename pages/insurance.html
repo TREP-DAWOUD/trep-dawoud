@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="معلومات التأمين الجبلي - دليل التأمين وحماية الرحلات من TREP DAWOUD">
+    <meta name="keywords" content="تأمين جبلي، حماية رحلات، تغطية طبية، إجلاء">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://trepdawoud.com/pages/insurance.html">
+    <title>معلومات التأمين | TREP DAWOUD</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛏️</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <style>
+        .insurance-intro {
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 2px solid var(--border-color);
+        }
+
+        .insurance-warning {
+            background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(248,113,113,0.15));
+            border: 2px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-right: 5px solid #ef4444;
+        }
+
+        .warning-title {
+            color: #991b1b;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-text {
+            color: #7f1d1d;
+            line-height: 1.6;
+        }
+
+        .insurance-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .insurance-card {
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px var(--shadow-medium);
+            border-color: var(--accent-color);
+        }
+
+        .insurance-card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .insurance-card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .insurance-card-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .insurance-card-list {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+
+        .insurance-card-list li {
+            margin: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .insurance-provider {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--border-color);
+        }
+
+        .provider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .provider-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .provider-rating {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .provider-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .detail-item {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .detail-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-value {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .coverage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .coverage-table th {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+
+        .coverage-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .coverage-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .coverage-table tr:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        .coverage-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+
+        .contact-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .tips-section {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tip-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tip-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .tip-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .tip-content {
+            flex: 1;
+        }
+
+        .tip-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .tip-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-item {
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .comparison-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .comparison-label {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .insurance-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .provider-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .coverage-table {
+                font-size: 0.9rem;
+            }
+
+            .coverage-table th,
+            .coverage-table td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="contact-page">
+
+<nav class="navbar">
+    <div class="navbar-container container">
+        <div class="navbar-brand">⛏️ TREP DAWOUD</div>
+        <ul class="navbar-nav">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li class="nav-item">
+                <a href="./trips.html">الرحلات والدورات</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./trips.html">الرحلات</a></li>
+                    <li><a href="./courses.html">الدورات</a></li>
+                    <li><a href="./destinations.html">الوجهات</a></li>
+                    <li><a href="./mountains.html">الجبال</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./weather.html">الأدوات</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./weather.html">الطقس</a></li>
+                    <li><a href="./trail-status.html">حالة المسارات</a></li>
+                    <li><a href="./fitness-calculator.html">حاسبة اللياقة</a></li>
+                    <li><a href="./packing-checklist.html">قائمة التجهيزات</a></li>
+                    <li><a href="./gear-checklist.html">معدات التسلق</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./blog.html">المدونة</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./blog.html">جميع المقالات</a></li>
+                    <li><a href="../blog/article-1.html">نصائح السلامة</a></li>
+                    <li><a href="../blog/article-2.html">تقارير الرحلات</a></li>
+                    <li><a href="../blog/article-3.html">أخبار المتسلقين</a></li>
+                    <li><a href="../blog/article-4.html">شروحات تقنية</a></li>
+                    <li><a href="../blog/article-5.html">تجارب شخصية</a></li>
+                    <li><a href="../blog/article-6.html">دليل المبتدئين</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./safety.html">المعلومات</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./safety.html">السلامة</a></li>
+                    <li><a href="./first-aid.html">الإسعافات الأولية</a></li>
+                    <li><a href="./insurance.html" class="active">التأمين</a></li>
+                    <li><a href="./about.html">من نحن</a></li>
+                    <li><a href="./services.html">الخدمات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./contact.html">المزيد</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./contact.html">تواصل معنا</a></li>
+                    <li><a href="./gallery.html">المعرض</a></li>
+                    <li><a href="./map.html">الخريطة</a></li>
+                    <li><a href="./questions.html">الأسئلة الشائعة</a></li>
+                    <li><a href="./privacy.html">سياسة الخصوصية</a></li>
+                    <li><a href="./terms.html">الشروط والأحكام</a></li>
+                    <li><a href="./refund.html">سياسة الاسترجاع</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="../auth/login.html">حسابي</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../auth/login.html">تسجيل الدخول</a></li>
+                    <li><a href="../auth/register.html">إنشاء حساب</a></li>
+                    <li><a href="../dashboard/index.html">لوحة التحكم</a></li>
+                    <li><a href="../dashboard/profile.html">ملفي الشخصي</a></li>
+                    <li><a href="../dashboard/bookings.html">حجوزاتي</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navbar-controls">
+            <button class="theme-toggle" title="تبديل الوضع المظلم" onclick="toggleDarkMode()">🌙</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content reveal">
+        <h1>التأمين و الحماية 🛡️</h1>
+        <p>معلومات شاملة عن التأمين الجبلي وتغطية الحوادث والطوارئ</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="insurance-intro reveal">
+            <h2 style="margin-top: 0;">لماذا التأمين الجبلي مهم؟</h2>
+            <p>التأمين الجبلي يوفر حماية شاملة ضد المخاطر المحتملة أثناء رحلات التسلق والتنزه في المناطق الجبلية. يغطي الحوادث الطبية، الإجلاء الطارئ، والمضاعفات المتعلقة بالارتفاعات العالية.</p>
+            
+            <div class="insurance-warning">
+                <div class="warning-title">⚠️ تنبيه مهم</div>
+                <div class="warning-text">
+                    التأمين العام قد لا يغطي أنشطة التسلق والمغامرات الجبلية. تأكد من أن بوليصتك تشمل:
+                    <ul style="margin: 1rem 0 0 2rem;">
+                        <li>أنشطة رياضية متطرفة</li>
+                        <li>الارتفاعات العالية (فوق 3000 متر)</li>
+                        <li>الإجلاء الطبي بالهليكوبتر</li>
+                        <li>الأنشطة في مناطق نائية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal">
+            <h2 style="text-align: center; margin-bottom: 2rem;">أنواع التأمين المتوفرة</h2>
+            <div class="insurance-cards-grid reveal-group">
+                <div class="insurance-card reveal">
+                    <div class="insurance-card-icon">💰</div>
+                    <div class="insurance-card-title">تأمين الرحلة</div>
+                    <div class="insurance-card-description">تأمين قصير الأجل لرحلات محددة</div>
+                    <ul class="insurance-card-list">
+                        <li>تغطية 24-48 ساعة</li>
+                        <li>مرن وقابل للتعديل</li>
+                        <li>أسعار معقولة</li>
+                        <li>تشمل الطوارئ الطبية</li>
+                    </ul>
+                </div>
+
+                <div class="insurance-card reveal">
+                    <div class="insurance-card-icon">🎯</div>
+                    <div class="insurance-card-title">التأمين السنوي</div>
+                    <div class="insurance-card-description">تغطية سنوية شاملة للمتسلقين النشطين</div>
+                    <ul class="insurance-card-list">
+                        <li>تغطية غير محدودة</li>
+                        <li>أرخص على المدى الطويل</li>
+                        <li>تخفيضات خاصة</li>
+                        <li>خدمة عملاء متخصصة</li>
+                    </ul>
+                </div>
+
+                <div class="insurance-card reveal">
+                    <div class="insurance-card-icon">🚁</div>
+                    <div class="insurance-card-title">تأمين الإجلاء</div>
+                    <div class="insurance-card-description">تغطية خاصة للإجلاء الطارئ</div>
+                    <ul class="insurance-card-list">
+                        <li>إجلاء بالهليكوبتر</li>
+                        <li>تكاليف البحث والإنقاذ</li>
+                        <li>نقل طبي</li>
+                        <li>دعم عائلي فوري</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">مقارنة أنواع التأمين</h2>
+            <div class="insurance-provider">
+                <div class="provider-header">
+                    <div class="provider-name">🏢 شركات التأمين الموصى بها</div>
+                </div>
+                <table class="coverage-table">
+                    <thead>
+                        <tr>
+                            <th>الخدمة</th>
+                            <th>رحلة واحدة</th>
+                            <th>سنوي</th>
+                            <th>متقدم</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="coverage-icon">🏥</span>تغطية طبية أساسية</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓✓</td>
+                        </tr>
+                        <tr>
+                            <td><span class="coverage-icon">🚁</span>إجلاء بالهليكوبتر</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓✓</td>
+                        </tr>
+                        <tr>
+                            <td><span class="coverage-icon">🌍</span>غطاء دولي</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓✓</td>
+                        </tr>
+                        <tr>
+                            <td><span class="coverage-icon">🧗</span>رياضات متطرفة</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓✓</td>
+                        </tr>
+                        <tr>
+                            <td><span class="coverage-icon">💼</span>تغطية السلع</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓✓</td>
+                        </tr>
+                        <tr>
+                            <td><span class="coverage-icon">👨‍👩‍👧‍👦</span>دعم عائلي</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓✓</td>
+                        </tr>
+                        <tr>
+                            <td><span class="coverage-icon">📞</span>خط ساخن 24/7</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">نصائح مهمة للتأمين</h2>
+            <div class="tips-section reveal">
+                <div class="tip-item">
+                    <div class="tip-icon">📋</div>
+                    <div class="tip-content">
+                        <div class="tip-title">اقرأ التفاصيل الدقيقة</div>
+                        <div class="tip-text">تأكد من معرفتك الكاملة بما تغطيه البوليصة وما لا تغطيه. لا تفترض أن جميع الأنشطة الجبلية مغطاة.</div>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">🔍</div>
+                    <div class="tip-content">
+                        <div class="tip-title">تحقق من الحد الأقصى للارتفاع</div>
+                        <div class="tip-text">تأكد من أن البوليصة تغطي الارتفاع الذي ستصل إليه (توبقال 4167 متر، الهيمالايا 5000+ متر)</div>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">🆘</div>
+                    <div class="tip-content">
+                        <div class="tip-title">احفظ رقم الطوارئ</div>
+                        <div class="tip-text">احتفظ دائماً برقم خط الطوارئ التابع لشركة التأمين والمعلومات الهامة الأخرى</div>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">💳</div>
+                    <div class="tip-content">
+                        <div class="tip-title">احمل بطاقة التأمين</div>
+                        <div class="tip-text">احمل نسخة فعلية ورقمية من بطاقة التأمين والمستندات المهمة</div>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">🏥</div>
+                    <div class="tip-content">
+                        <div class="tip-title">تواصل مع الطبيب قبل الرحلة</div>
+                        <div class="tip-text">استشر طبيبك قبل الرحلات الجبلية خاصة للارتفاعات العالية جداً</div>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">📞</div>
+                    <div class="tip-content">
+                        <div class="tip-title">تواصل مع شركة التأمين</div>
+                        <div class="tip-text">أبلغ شركة التأمين عن أي حادث أو حالة طوارئ فوراً</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">ماذا تغطي البوليصة؟</h2>
+            <div class="comparison-grid reveal-group">
+                <div class="comparison-item reveal">
+                    <div class="comparison-icon">🏥</div>
+                    <div class="comparison-label">التغطية الطبية</div>
+                    <div class="comparison-text">فحوصات طبية، أدوية، العلاجات الطارئة، الإقامة في المستشفى</div>
+                </div>
+                <div class="comparison-item reveal">
+                    <div class="comparison-icon">🚁</div>
+                    <div class="comparison-label">الإجلاء و النقل</div>
+                    <div class="comparison-text">إجلاء بالهليكوبتر، نقل بسيارة إسعاف، تكاليف النقل الدولي</div>
+                </div>
+                <div class="comparison-item reveal">
+                    <div class="comparison-icon">💊</div>
+                    <div class="comparison-label">الأدوية و الفحوصات</div>
+                    <div class="comparison-text">الأدوية الضرورية، الاختبارات المخبرية، الأشعات</div>
+                </div>
+                <div class="comparison-item reveal">
+                    <div class="comparison-icon">👨‍⚕️</div>
+                    <div class="comparison-label">الاستشارات الطبية</div>
+                    <div class="comparison-text">استشارات الأطباء، خط المساعدة الهاتفية 24/7</div>
+                </div>
+                <div class="comparison-item reveal">
+                    <div class="comparison-icon">🆘</div>
+                    <div class="comparison-label">البحث و الإنقاذ</div>
+                    <div class="comparison-text">نفقات البحث والإنقاذ في الحالات الخطيرة</div>
+                </div>
+                <div class="comparison-item reveal">
+                    <div class="comparison-icon">👨‍👩‍👧‍👦</div>
+                    <div class="comparison-label">الدعم العائلي</div>
+                    <div class="comparison-text">تذاكر طيران للعائلة، توفير مترجم، تكاليف الاتصالات</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 3rem;">
+            <div class="card glass-card" style="padding: 2rem; text-align: center;">
+                <h2 style="margin-bottom: 1.5rem;">هل لديك أسئلة حول التأمين؟</h2>
+                <p style="margin-bottom: 1.5rem;">تواصل معنا لمساعدتك في اختيار البوليصة المناسبة لرحلتك</p>
+                <a href="./contact.html" class="contact-button">تواصل معنا</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>عن TREP DAWOUD</h3>
+            <p>منصة متخصصة في تسلق الجبال منذ 2024.</p>
+        </div>
+        <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="../">الرئيسية</a></li>
+                <li><a href="./safety.html">السلامة</a></li>
+                <li><a href="./first-aid.html">إسعافات</a></li>
+                <li><a href="./contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024-2026 TREP DAWOUD. جميع الحقوق محفوظة.</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">⚠️ هذه المعلومات للتعليم فقط وليست نصيحة قانونية أو طبية.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="حاسبة اللياقة والصعوبة - حدد المسارات والرحلات المناسبة لمستوى لياقتك البدنية من TREP DAWOUD">
+    <meta name="keywords" content="حاسبة صعوبة، مستوى اللياقة، اختبار التسلق، توصيات الرحلات">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://trepdawoud.com/pages/fitness-calculator.html">
+    <title>حاسبة اللياقة والصعوبة | TREP DAWOUD</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛏️</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <style>
+        .quiz-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px var(--shadow-medium);
+            border: 2px solid var(--border-color);
+        }
+
+        .quiz-progress {
+            margin-bottom: 2rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .quiz-question {
+            margin-bottom: 2rem;
+            animation: slideInUp 0.3s ease;
+        }
+
+        .question-number {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0.75rem 0 1.5rem 0;
+        }
+
+        .options-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .option-btn {
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: right;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        .option-btn:hover {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(255,107,53,0.05));
+            transform: translateX(-5px);
+        }
+
+        .option-btn.selected {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .option-label {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .option-description {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .option-btn.selected .option-description {
+            opacity: 0.95;
+        }
+
+        .quiz-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-prev,
+        .btn-next {
+            flex: 1;
+            padding: 0.85rem;
+            border: 2px solid var(--border-color);
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-next {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .btn-next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.3);
+        }
+
+        .btn-prev:hover {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(255,107,53,0.05));
+        }
+
+        .btn-prev:disabled,
+        .btn-next:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .results-container {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .results-score {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 8px 25px var(--shadow-medium);
+        }
+
+        .score-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .score-label {
+            font-size: 0.9rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .level-badge {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .level-beginner {
+            background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(52,211,153,0.2));
+            color: #059669;
+        }
+
+        .level-intermediate {
+            background: linear-gradient(135deg, rgba(251,146,60,0.2), rgba(249,115,22,0.2));
+            color: #92400e;
+        }
+
+        .level-advanced {
+            background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(96,165,250,0.2));
+            color: #1e40af;
+        }
+
+        .level-expert {
+            background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(168,85,247,0.2));
+            color: #6b21a8;
+        }
+
+        .recommendations {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .recommendation-item {
+            padding: 1rem;
+            background: var(--bg-primary);
+            border-right: 4px solid var(--accent-color);
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .recommendation-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .recommendation-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .recommendation-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .btn-restart {
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-restart:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .quiz-container {
+                padding: 1.5rem;
+            }
+
+            .question-text {
+                font-size: 1.1rem;
+            }
+
+            .score-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .score-value {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="contact-page">
+
+<nav class="navbar">
+    <div class="navbar-container container">
+        <div class="navbar-brand">⛏️ TREP DAWOUD</div>
+        <ul class="navbar-nav">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li class="nav-item">
+                <a href="./trips.html">الرحلات والدورات</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./trips.html">الرحلات</a></li>
+                    <li><a href="./courses.html">الدورات</a></li>
+                    <li><a href="./destinations.html">الوجهات</a></li>
+                    <li><a href="./mountains.html">الجبال</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./weather.html">الأدوات</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./weather.html">الطقس</a></li>
+                    <li><a href="./trail-status.html">حالة المسارات</a></li>
+                    <li><a href="./fitness-calculator.html" class="active">حاسبة اللياقة</a></li>
+                    <li><a href="./packing-checklist.html">قائمة التجهيزات</a></li>
+                    <li><a href="./gear-checklist.html">معدات التسلق</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./blog.html">المدونة</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./blog.html">جميع المقالات</a></li>
+                    <li><a href="../blog/article-1.html">نصائح السلامة</a></li>
+                    <li><a href="../blog/article-2.html">تقارير الرحلات</a></li>
+                    <li><a href="../blog/article-3.html">أخبار المتسلقين</a></li>
+                    <li><a href="../blog/article-4.html">شروحات تقنية</a></li>
+                    <li><a href="../blog/article-5.html">تجارب شخصية</a></li>
+                    <li><a href="../blog/article-6.html">دليل المبتدئين</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./safety.html">المعلومات</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./safety.html">السلامة</a></li>
+                    <li><a href="./first-aid.html">الإسعافات الأولية</a></li>
+                    <li><a href="./insurance.html">التأمين</a></li>
+                    <li><a href="./about.html">من نحن</a></li>
+                    <li><a href="./services.html">الخدمات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="./contact.html">المزيد</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./contact.html">تواصل معنا</a></li>
+                    <li><a href="./gallery.html">المعرض</a></li>
+                    <li><a href="./map.html">الخريطة</a></li>
+                    <li><a href="./questions.html">الأسئلة الشائعة</a></li>
+                    <li><a href="./privacy.html">سياسة الخصوصية</a></li>
+                    <li><a href="./terms.html">الشروط والأحكام</a></li>
+                    <li><a href="./refund.html">سياسة الاسترجاع</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="../auth/login.html">حسابي</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../auth/login.html">تسجيل الدخول</a></li>
+                    <li><a href="../auth/register.html">إنشاء حساب</a></li>
+                    <li><a href="../dashboard/index.html">لوحة التحكم</a></li>
+                    <li><a href="../dashboard/profile.html">ملفي الشخصي</a></li>
+                    <li><a href="../dashboard/bookings.html">حجوزاتي</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navbar-controls">
+            <button class="theme-toggle" title="تبديل الوضع المظلم" onclick="toggleDarkMode()">🌙</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content reveal">
+        <h1>حاسبة اللياقة والصعوبة 💪</h1>
+        <p>اختبر مستوى لياقتك البدنية واكتشف الرحلات والمسارات المناسبة لك</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="quiz-container reveal" id="quizContainer">
+            <!-- Quiz will be rendered here -->
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>كيف يعمل الاختبار؟</h2>
+        </div>
+        <div class="grid grid-3 reveal-group">
+            <div class="card glass-card reveal">
+                <div style="padding: 1.5rem; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">❓</div>
+                    <h4>10 أسئلة سريعة</h4>
+                    <p>أسئلة عن خبرتك وحالتك البدنية</p>
+                </div>
+            </div>
+            <div class="card glass-card reveal">
+                <div style="padding: 1.5rem; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                    <h4>تقييم دقيق</h4>
+                    <p>نتيجة موضوعية لمستوى اللياقة</p>
+                </div>
+            </div>
+            <div class="card glass-card reveal">
+                <div style="padding: 1.5rem; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+                    <h4>توصيات مخصصة</h4>
+                    <p>رحلات ودورات تناسب مستواك</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>عن TREP DAWOUD</h3>
+            <p>منصة متخصصة في تسلق الجبال منذ 2024.</p>
+        </div>
+        <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="../">الرئيسية</a></li>
+                <li><a href="./courses.html">الدورات</a></li>
+                <li><a href="./safety.html">السلامة</a></li>
+                <li><a href="./contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024-2026 TREP DAWOUD. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<script src="../js/fitness-calculator.js"></script>
+</body>
+</html>
