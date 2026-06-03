@@ -8,7 +8,7 @@
 ### 1. **SEO Optimizations**
 
 #### ✓ Sitemap & Robots Configuration
-- **Sitemap.xml**: Updated with current date (2026-06-01), proper domain structure (https://trepdawoud.com/)
+- **Sitemap.xml**: Updated with current date (2026-06-01), proper domain structure (https://trep-dawoud.github.io/trep-dawoud/)
 - **Robots.txt**: Optimized with:
   - Proper crawl directives for search engines (Googlebot, Bingbot, Slurp)
   - Blocked bad crawlers (AhrefsBot, SemrushBot)
@@ -20,7 +20,7 @@ Updated all major pages with:
 - **Unique, descriptive meta titles** (50-60 characters)
 - **Compelling meta descriptions** (150-160 characters) in Arabic
 - **Relevant keywords** tailored to each page
-- **Canonical URLs** pointing to https://trepdawoud.com/
+- **Canonical URLs** pointing to https://trep-dawoud.github.io/trep-dawoud/
 - **Robots meta tag** set to "index, follow" for public pages
 
 **Pages Updated:**
