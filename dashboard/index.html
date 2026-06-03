@@ -1,131 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم - TREP DAWOUD</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-
-<nav class="navbar">
-    <div class="navbar-container container">
-        <div class="navbar-brand">⛏️ TREP DAWOUD</div>
-        <ul class="navbar-nav">
-            <li><a href="/dashboard/">لوحتي</a></li>
-            <li><a href="/dashboard/profile.html">ملفي الشخصي</a></li>
-            <li><a href="/dashboard/bookings.html">حجوزاتي</a></li>
-            <li><a href="/dashboard/courses.html">دوراتي</a></li>
-        </ul>
-        <div class="navbar-controls">
-            <button class="theme-toggle">🌙</button>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </div>
-</nav>
-
-<section class="section">
-    <div class="container">
-        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2rem; min-height: 60vh;">
-            <!-- Sidebar -->
-            <aside style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px; height: fit-content; position: sticky; top: 80px;">
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
-                        👤
-                    </div>
-                    <h3 style="margin: 0 0 0.5rem 0;">أحمد علي</h3>
-                    <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">ahmad@email.com</p>
-                </div>
-
-                <nav style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <a href="/dashboard/" class="btn btn-primary btn-full" style="text-align: left;">📊 لوحة التحكم</a>
-                    <a href="/dashboard/profile.html" class="btn btn-ghost btn-full" style="text-align: left;">👤 ملفي الشخصي</a>
-                    <a href="/dashboard/bookings.html" class="btn btn-ghost btn-full" style="text-align: left;">📅 حجوزاتي</a>
-                    <a href="/dashboard/courses.html" class="btn btn-ghost btn-full" style="text-align: left;">🎓 دوراتي</a>
-                    <a href="/dashboard/settings.html" class="btn btn-ghost btn-full" style="text-align: left;">⚙️ الإعدادات</a>
-                    <button class="btn btn-danger btn-full" style="text-align: left; background: var(--danger);">🚪 تسجيل الخروج</button>
-                </nav>
-            </aside>
-
-            <!-- Main Content -->
-            <main>
-                <h2>أهلاً وسهلاً يا أحمد! 👋</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">هنا يمكنك إدارة حجوزاتك ودوراتك ومعلوماتك الشخصية</p>
-
-                <!-- Stats -->
-                <div class="grid grid-4" style="margin-bottom: 3rem;">
-                    <div class="card" style="border: none; text-align: center;">
-                        <div style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem;">3</div>
-                        <p style="color: var(--text-secondary);">رحلات محجوزة</p>
-                    </div>
-                    <div class="card" style="border: none; text-align: center;">
-                        <div style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.5rem;">2</div>
-                        <p style="color: var(--text-secondary);">دورات ملتحق</p>
-                    </div>
-                    <div class="card" style="border: none; text-align: center;">
-                        <div style="font-size: 2.5rem; color: var(--success); margin-bottom: 0.5rem;">1</div>
-                        <p style="color: var(--text-secondary);">شهادة حصلت عليها</p>
-                    </div>
-                    <div class="card" style="border: none; text-align: center;">
-                        <div style="font-size: 2.5rem; color: var(--warning); margin-bottom: 0.5rem;">15</div>
-                        <p style="color: var(--text-secondary);">ساعات تسلق</p>
-                    </div>
-                </div>
-
-                <!-- Recent Bookings -->
-                <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
-                    <h3 style="margin-top: 0;">حجوزاتك القادمة</h3>
-                    <div style="display: grid; gap: 1rem;">
-                        <div style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; border-right: 4px solid var(--accent-color); display: flex; justify-content: space-between; align-items: center;">
-                            <div>
-                                <strong>جبل سلامة - 25 يناير</strong>
-                                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">رحلة يومية | 6:00 - 10:00 صباحاً</p>
-                            </div>
-                            <span style="background: var(--success); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem;">✅ تم التأكيد</span>
-                        </div>
-
-                        <div style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; border-right: 4px solid var(--primary-color); display: flex; justify-content: space-between; align-items: center;">
-                            <div>
-                                <strong>جبل تهامة - 27-28 يناير</strong>
-                                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">رحلة نهاية أسبوع | يومان</p>
-                            </div>
-                            <span style="background: var(--success); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem;">✅ تم التأكيد</span>
-                        </div>
-                    </div>
-                    <a href="/dashboard/bookings.html" class="btn btn-outline" style="margin-top: 1rem;">عرض جميع الحجوزات →</a>
-                </div>
-
-                <!-- Active Courses -->
-                <div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 12px;">
-                    <h3 style="margin-top: 0;">دوراتك النشطة</h3>
-                    <div style="display: grid; gap: 1rem;">
-                        <div style="background: var(--bg-primary); padding: 1rem; border-radius: 8px;">
-                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                                <div>
-                                    <strong>أساسيات التسلق</strong>
-                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">اليوم 2 من 5</p>
-                                </div>
-                                <span class="badge badge-primary">جارية</span>
-                            </div>
-                            <div style="background: var(--bg-secondary); border-radius: 4px; height: 8px; overflow: hidden;">
-                                <div style="background: var(--accent-color); width: 40%; height: 100%;"></div>
-                            </div>
-                            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: var(--text-secondary);">40% مكتملة</p>
-                        </div>
-                    </div>
-                    <a href="/dashboard/courses.html" class="btn btn-outline" style="margin-top: 1rem;">عرض دوراتي →</a>
-                </div>
-            </main>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="footer-bottom">
-        <p>&copy; 2024 TREP DAWOUD. جميع الحقوق محفوظة</p>
-    </div>
-</footer>
-
-<script src="/js/main.js"></script>
-</body>
-</html>
