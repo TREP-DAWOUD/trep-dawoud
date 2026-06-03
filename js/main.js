@@ -262,9 +262,9 @@
               link.classList.remove('active');
               const href = link.getAttribute('href');
 
-              if (currentPath === '/' && href === 'index.html') {
+              if ((currentPath === '/' || currentPath === '/index.html') && (href === '/' || href === '/index.html' || href === 'index.html')) {
                   link.classList.add('active');
-              } else if (href && currentPath.includes(href.replace('.html', ''))) {
+              } else if (href && href !== '/' && href !== 'index.html' && currentPath.includes(href.replace('.html', ''))) {
                   link.classList.add('active');
               }
           });
@@ -296,7 +296,7 @@
 
               // Create and append a dropdown toggle button
               const toggleBtn = document.createElement('button');
-              toggleBtn.className = 'dropdown-toggle';
+              toggleBtn.className = 'dropdown-toggle-btn';
               toggleBtn.innerHTML = '▼';
               toggleBtn.setAttribute('aria-label', 'فتح القائمة المنسدلة');
               toggleBtn.addEventListener('click', (e) => this.toggleDropdown(e, item));
@@ -808,19 +808,6 @@
       });
     }
   }
-
-  // ===================== PAGE SCROLL ACTIVE NAVBAR LINK =====================
-  window.addEventListener('scroll', () => {
-    const navLinks = document.querySelectorAll('.navbar-nav a');
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      const href = link.getAttribute('href');
-      if (href === window.location.pathname || href === './') {
-        link.classList.add('active');
-      }
-    });
-  });
-
   // ===================== INITIALIZE ON LOAD =====================
   console.log('✅ TREP DAWOUD - Main Script Loaded Successfully');
 
